@@ -22,3 +22,7 @@ MongoDB
 ### Conexão com banco
 
 Alterar os dados de acesso do banco no arquivo .env, na criação original foi usado MongoDB Atlas
+
+### Ativação
+
+> npm start
