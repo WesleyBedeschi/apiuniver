@@ -1,8 +1,8 @@
 const router = require('express').Router()
-
 const { Router } = require('express')
 const { append } = require('express/lib/response')
 const Universities = require('../models/Universities')
+const axios = require("axios")
 
 //Create - Crianção de dados
 router.post('/', async (req, res) => {
@@ -128,6 +128,11 @@ router.patch('/:id', async(req, res) => {
 
 //Inserir dados iniciais
 
-
-
 module.exports = router
+
+const country = ["argentina","brasil","chile","colombia","paraguai","peru","suriname","uruguay"]
+
+country.forEach(function(nome) {
+    axios.get(`http://universities.hipolabs.com/search?country=${nome}`).then(function(json){
+})
+});
