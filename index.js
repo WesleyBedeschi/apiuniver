@@ -15,34 +15,9 @@ app.use(
 app.use(express.json())
 
 // rotas da API
-app.post('/Universities', async (req, res) => {
+const universitiesRoutes = require('./routes/universitiesRoutes')
 
-    // req.body
-    const {alpha_two_code, web_pages, name, country, domains, state_province} = req.body
-
-    const universities = {
-        alpha_two_code, 
-        web_pages, 
-        name, 
-        country, 
-        domains, 
-        state_province
-    }
-
-    try {
-
-    //Criando dados
-     await Universities.create(universities)
-     
-     res.status(201).json({message: 'University successfully entered'})
-     
-    } catch (error) {
-        res.status(500).json({error: error})
-    }
-
-
-})
-
+app.use('/universities', universitiesRoutes)
 // rota inicial / endpoint
 
 app.get('/', (req, res) => {
