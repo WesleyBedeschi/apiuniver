@@ -13,11 +13,11 @@ MongoDB
 
 ### Clonar
 
-git@github.com:WesleyBedeschi/apiuniver.git
+> git clone git@github.com:WesleyBedeschi/apiuniver.git
 
-###I nstalar de dependencias
+### Instalar de dependencias
 
-npm install
+> npm install
 
 ### Conexão com banco
 
